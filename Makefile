@@ -7,7 +7,7 @@ clean:
 	npm install
 
 deploy:
-	hexo lean && hexo deploy
+	hexo сlean && hexo deploy
 
 newpost:
 	hexo new "имя-нового-поста"
