@@ -1,9 +1,8 @@
 ---
 title: Как создать блог на Github Pages
 date: 2021-08-10 08:28:57
-tags: 
+tags:
 ---
-
 ## Как создать блог на Github Pages
 
 В этой статье рассказано, как просто и с нуля создать сайт и сделать его доступным по адресу sitename.github.io (бесплатный хостинг Github) и подключить к нему доменное имя.
@@ -11,6 +10,7 @@ tags:
 Использовать будем [HEXO](https://hexo.io/ "Считаешь себя синьором? Да кого ты обманываешь").
 
 Примерный план работы:
+
 * Зачем этот генератор статических сайтов?
 * Установка hexo на компьютер
 * Настройки сайта
@@ -30,7 +30,7 @@ tags:
 
 **Установка hexo на компьютер**
 
-1. Устанавливаем на компьютер [Node.js](https://nodejs.org/en/ "Считаешь себя синьором? Да кого ты обманываешь") и [Git](http://git-scm.com/ "Считаешь себя синьором? Да кого ты обманываешь") 
+1. Устанавливаем на компьютер [Node.js](https://nodejs.org/en/ "Считаешь себя синьором? Да кого ты обманываешь") и [Git](http://git-scm.com/ "Считаешь себя синьором? Да кого ты обманываешь")
 2. Устанавливаем hexo
 
 {% codeblock %}
@@ -65,7 +65,7 @@ $ Set-ExecutionPolicy unrestricted
 $ npm install hexo-renderer-jade --save
 $ npm install hexo-generator-feed --save
 {% endcodeblock %}
-5. Подключаем создание автоматической папки для ресурсов в source/_posts и имя поста. Для этого идем в файл _config.yml и меняем 
+5. Подключаем создание автоматической папки для ресурсов в source/_posts и имя поста. Для этого идем в файл _config.yml и меняем
 {% codeblock %}
 post_asset_folder: true
 {% endcodeblock %}
@@ -74,14 +74,16 @@ post_asset_folder: true
 $ hexo new "имя-нового-поста"
 {% endcodeblock %}
 7. Редактирование материала. В целом используется md разметка, но есть парочка важных элементов
+
 * [Вставка кода](https://hexo.io/ru/docs/tag-plugins.html)
 * [Вставка картинки](https://hexo.io/ru/docs/asset-folders.html)
+
 8. Чтобы посмотреть результат работы до деплоя на github - http://localhost:4000/. Если результат устраивает - деплоим.
-{% asset_img server.png Здесь будет описан точный адрес сайта. %}
+   {% asset_img server.png Здесь будет описан точный адрес сайта. %}
 
 **Создание репозитория**
 9. Создаем репозиторий в гите с именем пользователя. В моем случае olegnizamov.github.io
-   {% asset_img projectname.png Имя проекта. %}
+{% asset_img projectname.png Имя проекта. %}
 
 **Добавляем код в репозиторий**
 10. Для автоматического деплоя блога на GitHub установим hexo-deployer-git
@@ -90,15 +92,15 @@ $ npm install hexo-deployer-git --save
 {% endcodeblock %}
 
 11. и редактируем файл _config.yml
-{% codeblock %}
-   deploy:
-      type: git
-      repo: <repository url> # https://github.com/username/username.github.io
-{% endcodeblock %}
+    {% codeblock %}
+    deploy:
+    type: git
+    repo: <repository url> # https://github.com/username/username.github.io
+    {% endcodeblock %}
 12. и отправляем изменения на блог
-{% codeblock %}
-$ hexo clean && hexo deploy
-{% endcodeblock %}
+    {% codeblock %}
+    $ hexo clean && hexo deploy
+    {% endcodeblock %}
 
 **Настраиваем репозитория для публикации**
 **Nota bene!** Полную информацию можно почитать тут [Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-records-with-your-dns-provider)
@@ -106,7 +108,7 @@ $ hexo clean && hexo deploy
 {% asset_img domain.png %}
 
 **Добавляем в репозиторий CNAME**
-14. Если мы настраивали зеркало через github настройки, то файл CNAME на сервере создается автоматически. Однако есть проблема, при деплои он каждый раз будет затираться.Создавать данный файл ручками (мы ленивые и за автоматизацию) - плохо. Чтобы создать файл CNAME с помощью Hexo, просто создайте ~/hexo/source/CNAME с необходимым содержанием. 
+14. Если мы настраивали зеркало через github настройки, то файл CNAME на сервере создается автоматически. Однако есть проблема, при деплои он каждый раз будет затираться.Создавать данный файл ручками (мы ленивые и за автоматизацию) - плохо. Чтобы создать файл CNAME с помощью Hexo, просто создайте ~/hexo/source/CNAME с необходимым содержанием.
 При выполнении hexo deploy этот файл будет обновляться на Github Pages.
 {% asset_img cname1.png %}
 {% asset_img cname2.png %}
