@@ -12,6 +12,11 @@ date: 2021-08-14 17:49:57
 * [Галерея разбитых сердец (2020)](https://www.kinopoisk.ru/film/679028/)
 * [Поезд в Пусан (2016)](https://www.kinopoisk.ru/film/977288/)
 * [Будь моим Кириллом (2021)](https://www.kinopoisk.ru/film/1445243/)
+* [Звездный путь (2009)](https://www.kinopoisk.ru/film/255129/)
+* [Стартрек: Возмездие (2013)](https://www.kinopoisk.ru/film/455165/)
+* [Бэтмен: Долгий Хэллоуин. Часть 1](https://www.kinopoisk.ru/film/4415147/)
+* [Бэтмен: Долгий Хэллоуин. Часть 2](https://www.kinopoisk.ru/film/4423227/)
+
 
 **Сериалы**
 
@@ -21,6 +26,7 @@ date: 2021-08-14 17:49:57
 * [Чернобыль (мини–сериал 2019)](https://www.kinopoisk.ru/series/1227803/)
 * [Мир Дикого Запада](https://www.kinopoisk.ru/series/195523/)
 * [Голяк](https://www.kinopoisk.ru/series/1236393/)
+* [Игра в кальмара](https://www.kinopoisk.ru/series/1301710/)
 
 **Игры**
 
